@@ -8451,15 +8451,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11233,7 +11233,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11676,7 +11676,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11730,14 +11730,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -11775,7 +11775,9 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="GOAL:">GOAL:<a class="anchor-link" href="#GOAL:">&#182;</a></h3><p>See if you can come up with a way to rank players, pick champions, or any other interesting statistical insight. This is intentionally rather open-ended. Feel free to use any and all resources available to you.</p>
+<h3 id="GOAL:">GOAL:<a class="anchor-link" href="#GOAL:">&#182;</a></h3><p>
+  Explore data from <a href='https://www.kaggle.com/chuckephron/leagueoflegends'>this open source collection of professional league of legends matches.</a>
+</p>
 <p>Analysis by Alex Bisberg</p>
 
 </div>
@@ -12703,7 +12705,7 @@ bfMnDY7on1NStDKzH2o000wzezOzH2o000wzezdzfbbNnyRJkiQNPvf5kyRJkqQWsPmTJEmSpBaw
 <span class="n">red</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;red</span><span class="si">{}</span><span class="s1">Champ&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">roles</span><span class="p">]</span>
 <span class="n">champ_gt_array</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">m</span> <span class="ow">in</span> <span class="n">matches</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
-  <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">blue</span> <span class="o">+</span> <span class="n">red</span><span class="p">:</span> 
+  <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">blue</span> <span class="o">+</span> <span class="n">red</span><span class="p">:</span>
     <span class="n">champ_gt_array</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
       <span class="p">[</span><span class="n">m</span><span class="p">[</span><span class="n">c</span><span class="p">],</span>
        <span class="n">m</span><span class="p">[</span><span class="s1">&#39;bResult&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="nb">bool</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="n">m</span><span class="p">[</span><span class="n">c</span><span class="p">]))</span> <span class="k">else</span> <span class="n">m</span><span class="p">[</span><span class="s1">&#39;rResult&#39;</span><span class="p">],</span>
@@ -13145,11 +13147,11 @@ kiRJktQA/w/t3udDGb6rkgAAAABJRU5ErkJggg==
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">play_cnt</span> <span class="o">=</span> <span class="n">champ_frame</span><span class="p">[[</span><span class="s1">&#39;win&#39;</span><span class="p">,</span><span class="s1">&#39;champ&#39;</span><span class="p">]]</span> \
   <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;champ&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> \
   <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;win&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-  
+
 <span class="n">top_75</span> <span class="o">=</span> <span class="n">play_cnt</span><span class="p">[</span><span class="n">play_cnt</span><span class="p">[</span><span class="s1">&#39;win&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">]</span>
 <span class="n">bot_25</span> <span class="o">=</span> <span class="n">play_cnt</span><span class="p">[</span><span class="n">play_cnt</span><span class="p">[</span><span class="s1">&#39;win&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">]</span>
 
-<span class="nb">len</span><span class="p">(</span><span class="n">play_cnt</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">top_75</span><span class="p">)</span>  
+<span class="nb">len</span><span class="p">(</span><span class="n">play_cnt</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">top_75</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13204,11 +13206,11 @@ kiRJktQA/w/t3udDGb6rkgAAAABJRU5ErkJggg==
       <span class="nb">abs</span><span class="p">(</span><span class="n">cw</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">-</span><span class="n">cl</span><span class="o">.</span><span class="n">mean</span><span class="p">()),</span>
       <span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">cw</span><span class="p">,</span><span class="n">cl</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mf">0.05</span>
   <span class="p">])</span>
-    
+
   <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
     <span class="n">data</span><span class="o">=</span><span class="n">mean_data</span><span class="p">,</span>
     <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;champ&#39;</span><span class="p">,</span><span class="s1">&#39;tot_games&#39;</span><span class="p">,</span><span class="s1">&#39;mean_win_gl&#39;</span><span class="p">,</span><span class="s1">&#39;mean_loss_gl&#39;</span><span class="p">,</span><span class="s1">&#39;abs_diff&#39;</span><span class="p">,</span><span class="s1">&#39;pvalue&#39;</span><span class="p">])</span>
-    
+
 
 <span class="n">mean_frame</span> <span class="o">=</span> <span class="n">process_games</span><span class="p">(</span><span class="n">top_75</span><span class="o">.</span><span class="n">index</span><span class="p">,</span><span class="n">wins</span><span class="p">,</span><span class="n">loses</span><span class="p">)</span>
 <span class="n">mean_frame</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;abs_diff&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)[:</span><span class="mi">10</span><span class="p">]</span>
@@ -13409,8 +13411,8 @@ kiRJktQA/w/t3udDGb6rkgAAAABJRU5ErkJggg==
 <span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">axes_style</span><span class="p">(</span><span class="s2">&quot;white&quot;</span><span class="p">):</span>
   <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">()</span>
   <span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
-    <span class="n">sv</span><span class="p">[[</span><span class="s1">&#39;mean_win_gl&#39;</span><span class="p">,</span><span class="s1">&#39;mean_loss_gl&#39;</span><span class="p">]],</span> 
-    <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+    <span class="n">sv</span><span class="p">[[</span><span class="s1">&#39;mean_win_gl&#39;</span><span class="p">,</span><span class="s1">&#39;mean_loss_gl&#39;</span><span class="p">]],</span>
+    <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Greens&#39;</span><span class="p">,</span>
     <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
   <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Mean win and loss time for games over 41 min&#39;</span><span class="p">)</span>
@@ -13699,7 +13701,7 @@ YII=
   </div>
 </body>
 
- 
+
 
 
 </html>
