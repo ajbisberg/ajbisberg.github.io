@@ -5,11 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Alex's Site</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <!-- <script src="main.js"></script> -->
 </head>
 <body>
-  <p>Coming soon!</p>
+  <div class="bg">
+    <div class="container">
+      <div class="grid-wrapper">
+        <div class="header1">
+          Alex Bisberg
+        </div>
+        <div class="header2">
+          <div class="nav">
+            <span class="nav-elem" data-pane="work">WORK </span>/
+            <span class="nav-elem fade" data-pane="play">PLAY </span>/
+            <span class="nav-elem fade" data-pane="media">MEDIA</span>
+          </div>
+        </div>
+        <div class="sidebar">
+          <ul>
+            <li class="sub pad-list">aj + {last name} @gmail.com</li>
+            <li class="sub">Online:</li>
+            <li class="sub">LinkedIn</li>
+            <li class="sub">GitHub</li>
+            <li class="sub">Google Scholar</li>
+            <!-- <li># data scientist</li>
+            <li># student </li>
+            <li># software engineer</li>
+            <li># video game nerd</li> -->
+          </ul>
+        </div>
+        <div class="content">
+          <ul class="show" data-pane="work">
+            <li class="pad-list">
+              Accepted MS in Computing at the <a href="http://www.cs.utah.edu/graduate/">Univeristy of Utah</a>
+              <div class="sub text2">Focus in Data Management and Analytics, starting August 2018</div>
+            </li>
+            <li class="pad-list">
+              Former Data Sceintist at <a href="https://www.hvst.com/">Harvest Exchange</a>
+            </li>
+            <li class="pad-list">Co-founder of <a href="http://www.dibsvis.com/">DiBS</a></li>
+            <li class="pad-list">BS in Bioengineering from <a href="https://bioengineering.rice.edu/">Rice University</a>
+              <div class="sub text2">Worked closely with <a href="https://qutublab.org/">Dr. Amina Qutub</a></div>
+            </li>
+          </ul>
+          <ul class="hide" data-pane="play">play</ul>
+          <ul class="hide" data-pane="media">
+            <li class="pad-list">
+              <a href="https://docs.google.com/presentation/d/1EICZZzNS-iMCIe8Ddgc0vYXjQbGKgcZQu35ItvwY0J0/edit?usp=sharing">The Sky is Falling</a>
+            </li>
+            <li class="pad-list">
+              <a href="https://medium.com/@ajbisberg/why-all-cities-need-an-event-like-denver-startup-week-38b1f35c5a91">Why all cities need an event like Denver Startup Week</a>
+            </li>
+            <li class="pad-list"><a href="http://blog.hvst.com/harvest-data-roundup-vol.-1">Harvest Data Roundup</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var togglePane = function togglePane(e) {
+      e.preventDefault();
+      var selectedPane = e.target.getAttribute('data-pane')
+      var navs = document.getElementsByClassName('nav-elem')
+      for (var i=0;i<navs.length;i++){
+        navs[i].className = 'nav-elem fade'
+      }
+      e.target.className = 'nav-elem'
+      var contentPanes = Array.from(document.querySelectorAll('div.content ul'))
+      for(var i=0;i<contentPanes.length;i++){contentPanes[i].className='hide'}
+      var showPane = contentPanes.filter(function(e) {return e.getAttribute('data-pane') == selectedPane})[0]
+      showPane.className = ''
+    }
+    var navs = document.getElementsByClassName('nav-elem')
+    for (var i=0;i<navs.length;i++){
+      navs[i].onclick = togglePane
+    }
+  </script>
 </body>
 </html>
