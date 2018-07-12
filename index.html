@@ -26,15 +26,13 @@
         <div class="sidebar">
           <ul>
             <li class="sub pad-list">aj + {last name} @gmail.com</li>
-            <li class="sub">Online:</li>
-            <li class="sub">LinkedIn</li>
-            <li class="sub">GitHub</li>
-            <li class="sub">Google Scholar</li>
-            <!-- <li># data scientist</li>
-            <li># student </li>
-            <li># software engineer</li>
-            <li># video game nerd</li> -->
+            <li class="sub text2 pad-list">online:</li>
+            <li class="sub"><a href="https://www.linkedin.com/in/abisberg/">LinkedIn</a></li>
+            <li class="sub"><a href="https://github.com/ajbisberg">GitHub</a></li>
+            <li class="sub"><a href="https://scholar.google.com/scholar?q=%E2%80%9Calex+bisberg%E2%80%9D">Google Scholar</a></li>
           </ul>
+          <div class="sub text2 pad-list">currently located:</div>
+          <div id="whereami"></div>
         </div>
         <div class="content">
           <ul class="show" data-pane="work">
@@ -43,22 +41,57 @@
               <div class="sub text2">Focus in Data Management and Analytics, starting August 2018</div>
             </li>
             <li class="pad-list">
-              Former Data Sceintist at <a href="https://www.hvst.com/">Harvest Exchange</a>
+              Former Data Scientist at <a href="https://www.hvst.com/">Harvest Exchange</a>
+              <div class="sub text2">Data extraction and storage with SQL</div>
+              <div class="sub text2">Data ingestion and transformation with Python</div>
+              <div class="sub text2">Data visualization and reports using <a href="https://reactjs.org/">React</a> and <a href="https://d3js.org/">D3</a></div>
             </li>
-            <li class="pad-list">Co-founder of <a href="http://www.dibsvis.com/">DiBS</a></li>
+            <li class="pad-list">
+              Co-founder of <a href="http://www.dibsvis.com/">DiBS</a>
+              <div class="sub text2">Data visualization and analytics startup</div>
+              <div class="sub text2">Accepted into <a href="https://www.owlspark.com/">OwlSpark</a> and <a href="http://www.tmc.edu/innovation/innovation-programs/tmcx/">TMCX</a></div>
+            </li>
             <li class="pad-list">BS in Bioengineering from <a href="https://bioengineering.rice.edu/">Rice University</a>
+              <div class="sub text2">Graduated with Distinction in Research and Creative Work</div>
               <div class="sub text2">Worked closely with <a href="https://qutublab.org/">Dr. Amina Qutub</a></div>
+              <div class="sub text2">Winner of <a href="https://www.synapse.org/#!Synapse:syn1720047/wiki/56221">DREAM 8</a> and the <a href="https://the-bioinformatics-peer-prize.thinkable.org/">Bioinformatics Peer Prize</a></div>
+              <div class="sub text2">Received the <a href="https://www.mdanderson.org/research/departments-labs-institutes/programs-centers/cancer-prevention-research-training-program.html">CPRTP</a> fellowship</div>
             </li>
           </ul>
-          <ul class="hide" data-pane="play">play</ul>
+          <ul class="hide" data-pane="play">
+            <li class="pad-list">eSports analytics</li>
+            <li class="pad-list"><a href="/lol-data.html"><i>Win rate based on game time</i></a></li>
+            <div class="sub text2 long-text pad-list"> Used python to analyze open source data from professional tournaments of the online game League of Legends.
+              In this game, 5 players play 5 different champions against another team of 5 to destroy the opposing base.
+              Investigated if there was a significant difference in the mean game time for games that a champion wins vs. games that they lose.
+              Found that some champions won games were significantly longer than lost games</div>
+            <li class="pad-list"><a href="https://docs.google.com/spreadsheets/d/15vv6mqI-u07gqDpwXnIhGrFzpLXKxMNT3PsVktY_U6s/edit#gid=1823991896">
+              <i>Player communication type and frequency</i></a>
+            </li>
+            <div class="sub text2 long-text pad-list">
+              Assembled data set by manually tagging compilation video of the Clutch Gaming League of Legends team.
+              Manually classified communication types. Observed differences in communication types between players and roles.
+            </div>
+            <li class="pad-list">Startups + apps</li>
+            <li class="pad-list"><a href="/lastbite-iphone.png"><i>Lastbite</i></a></li>
+            <div class="sub text2 long-text pad-list">
+              Built an Android/iOS app (python backend) where restaurants could post lower priced leftover food as they were closing and consumers could purchase it in a certain time window.
+              Customer interviews suggested that too few restaurants have leftovers for viable business model.
+            </div>
+
+          </ul>
           <ul class="hide" data-pane="media">
             <li class="pad-list">
               <a href="https://docs.google.com/presentation/d/1EICZZzNS-iMCIe8Ddgc0vYXjQbGKgcZQu35ItvwY0J0/edit?usp=sharing">The Sky is Falling</a>
+              <div class="sub text2">Some data science lessons I've learned, presented at <a href="https://www.spacedatasymposia.com/">DSSS 2018</a></div>
             </li>
             <li class="pad-list">
               <a href="https://medium.com/@ajbisberg/why-all-cities-need-an-event-like-denver-startup-week-38b1f35c5a91">Why all cities need an event like Denver Startup Week</a>
+              <div class="sub text2">Re: <a href="https://www.denverstartupweek.org/">Denver Startup Week</a></div>
             </li>
-            <li class="pad-list"><a href="http://blog.hvst.com/harvest-data-roundup-vol.-1">Harvest Data Roundup</a></li>
+            <li class="pad-list"><a href="http://blog.hvst.com/harvest-data-roundup-vol.-1">Harvest Data Roundup</a>
+              <div class="sub text2"> What are people reading and writing on Harvest Exchange?</div>
+            </li>
           </ul>
         </div>
       </div>
@@ -82,6 +115,19 @@
     for (var i=0;i<navs.length;i++){
       navs[i].onclick = togglePane
     }
+    function initMap() {
+      var myLatLng = {lat: 29.7604, lng: -95.3698};
+      var map = new google.maps.Map(document.getElementById('whereami'), {
+        center: myLatLng,
+        zoom: 4
+      });
+      var marker = new google.maps.Marker({
+        map: map,
+        position: myLatLng,
+      });
+    }
   </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjFCkwdehdDbBBBwvzQvWfqyZnt9IP1-0&callback=initMap"
+        async defer></script>
 </body>
 </html>
