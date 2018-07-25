@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Alex's Site</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <!-- <script src="main.js"></script> -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Alex's Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" >
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 <body>
   <div class="bg">
@@ -32,7 +32,8 @@
             <li class="sub"><a href="https://scholar.google.com/scholar?q=%E2%80%9Calex+bisberg%E2%80%9D">Google Scholar</a></li>
           </ul>
           <div class="sub text2 pad-list">currently located:</div>
-          <div id="whereami"></div>
+          <div id="whereami">
+          </div>
         </div>
         <div class="content">
           <ul class="show" data-pane="work">
@@ -115,19 +116,17 @@
     for (var i=0;i<navs.length;i++){
       navs[i].onclick = togglePane
     }
-    function initMap() {
-      var myLatLng = {lat: 29.7604, lng: -95.3698};
-      var map = new google.maps.Map(document.getElementById('whereami'), {
-        center: myLatLng,
-        zoom: 4
-      });
-      var marker = new google.maps.Marker({
-        map: map,
-        position: myLatLng,
-      });
-    }
   </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjFCkwdehdDbBBBwvzQvWfqyZnt9IP1-0&callback=initMap"
-        async defer></script>
+  <script type="text/javascript" src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"></script>
+  <script type="text/javascript">
+    var myloc = [40.7608,-111.8910]
+    var mymap = L.map('whereami').setView(myloc,11)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+      maxZoom: 18,
+      id: 'osm-streets'
+    }).addTo(mymap);
+    L.marker(myloc).addTo(mymap);
+  </script>
 </body>
 </html>
