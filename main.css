@@ -1,6 +1,8 @@
 body, html {
   height: 100%;
-  margin: 0px
+  margin: 0px;
+  background-color: #2f2f2f;
+  color: white;
 }
 
 .bg {
@@ -34,7 +36,6 @@ body, html {
     grid-template-areas:
       "header1 header2"
       "sidebar content";
-
   }
 }
 
@@ -86,7 +87,7 @@ ul {
 }
 
 .text2 {
-  color: gray;
+  color: #aaaaaa;
 }
 
 .hide {
@@ -94,7 +95,7 @@ ul {
 }
 
 .long-text {
-  max-width: 450px;
+  max-width: 650px;
 }
 
 #whereami {
@@ -106,4 +107,13 @@ ul {
 #me {
     width:75%;
     max-width:215px;
+}
+
+a {
+  color: yellow;
+}
+
+.banner {
+  max-width: 500px;
+  width: 100%;
 }
