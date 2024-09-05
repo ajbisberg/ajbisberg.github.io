@@ -38,7 +38,7 @@
                 <li class="sub"><a target="_blank" href="https://github.com/ajbisberg">GitHub</a></li>
                 <li class="sub"><a target="_blank" href="https://scholar.google.com/citations?user=xDAG-JkAAAAJ&hl=en">Google Scholar</a></li>
           </ul>
-          <div class="sub text2 pad-list">last updated: Oct 20, 2022</div>
+          <div class="sub text2 pad-list">last updated: Sep 5, 2024</div>
         </div>
         <div class="content">
           <ul class="show" data-pane="home">
@@ -63,9 +63,9 @@
           <ul class="hide" data-pane="games">
             <div class="text2 pad-list2">[ school ]</div>
             <li class="pad-list">
-              PhD in Computer Science at the <a target="_blank" href="https://viterbischool.usc.edu/">USC Viterbi School of Engineering</a>
-              <div class="sub text2">3<sup>rd</sup> year, currently working with <a target="_blank" href="http://www.emilio.ferrara.name/">Emilio Ferrara</a> and the <a target="_blank" href="https://sites.google.com/view/annenberg-game-lab/home">Annenberg Game Lab</a></div>
-              <div class="sub text2"> I study ways to increase pro-social behavior and collaboration through multiplayer online games.</div>
+              PhD Candidate in Computer Science at the <a target="_blank" href="https://www.cs.usc.edu/">USC Viterbi School of Engineering</a>
+              <div class="sub text2">5<sup>th</sup> year, currently working with <a target="_blank" href="http://www.emilio.ferrara.name/">HUMANS lab</a> and the <a target="_blank" href="https://sites.google.com/view/annenberg-game-lab/home">Annenberg Game Lab</a></div>
+              <div class="sub text2"> I study ways to increase pro-social behavior and collaboration in multiplayer online games.</div>
             </li>
             <li class="pad-list">
               MS in Computing at the <a target="_blank" href="http://www.cs.utah.edu/graduate/">Univeristy of Utah</a>
@@ -75,6 +75,10 @@
               <div class="sub text2"><a target="_blank" href="http://qed.cs.utah.edu/">QED lab</a> alunmi</div>
             </li>
             <div class="text2 pad-list2">[ work ]</div>
+            <li class="pad-list">
+              Data Science Intern at <a target="_blank" href="https://www.ea.com/">EA</a>
+              <div class="sub text2">Bot detection in <a target="_blank" href="https://www.ea.com/games/apex-legends">Apex Legends</a></div>
+            </li>
             <li class="pad-list">
               Data Science Intern at <a target="_blank" href="https://www.riotgames.com/">Riot Games</a>
               <div class="sub text2">Cross-product player engagement prediction.</div>
@@ -196,19 +200,19 @@
   </script>
   <script type="text/javascript" src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"></script>
   <script type="text/javascript">
-    var center = [34.0059314,-118.3668297]
-    var mymap = L.map('whereami').setView(center,10)
+    // var center = [34.0059314,-118.3668297]
+    var usc = [34.0219008,-118.2872923]
+    var mymap = L.map('whereami').setView(usc,10)
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
       maxZoom: 18,
       id: 'osm-streets'
     }).addTo(mymap);
-    var asc = [34.0219008,-118.2872923]
-    var mdr = [33.9799111,-118.4396126]
-    var m1 = L.marker(asc).addTo(mymap);
-    var m2 = L.marker(mdr).addTo(mymap);
-    m1.bindPopup("<b>ASC 229</b><br>Annenberg School for<br> Communication, USC<br>Los Angeles, CA") //.openPopup()
-    m2.bindPopup("<b>946</b><br>Information Sciences<br> Institute (ISI)<br>Marina Del Rey, CA")
+    // var mdr = [33.9799111,-118.4396126]
+    var m1 = L.marker(usc).addTo(mymap);
+    // var m2 = L.marker(mdr).addTo(mymap);
+    m1.bindPopup("<b>USC</b><br>Thomas Lord Department of<br> Computer Science <br>Los Angeles, CA") //.openPopup()
+    // m2.bindPopup("<b>946</b><br>Information Sciences<br> Institute (ISI)<br>Marina Del Rey, CA")
   </script>
 </body>
 </html>
