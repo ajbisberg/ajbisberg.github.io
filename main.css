@@ -27,6 +27,14 @@ body, html {
     "content";
 }
 
+.nav-desktop {
+  display: none;
+}
+
+.nav-mobile {
+  display: block;
+}
+
 @media only screen and (min-width:500px) {
   .grid-wrapper {
     display: grid;
@@ -36,6 +44,14 @@ body, html {
     grid-template-areas:
       "header1 header2"
       "sidebar content";
+  }
+
+  .nav-desktop {
+    display: block;
+  }
+
+  .nav-mobile {
+    display: none;
   }
 }
 
@@ -102,6 +118,24 @@ ul {
   margin: 0px 50px 20px 0px;
   height: 150px;
   max-width: 250px;
+}
+
+#office {
+  margin: 0px 0px 20px 0px;
+}
+
+#whereami {
+  display: none;
+}
+
+@media only screen and (min-width:500px) {
+  #whereami {
+    display: block;
+  }
+
+  #office {
+    display: none;
+  }
 }
 
 #me {

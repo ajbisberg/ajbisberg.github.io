@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Alex's Site</title>
+  <title>Alex Bisberg</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" >
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css">
@@ -17,159 +17,265 @@
           Alex Bisberg
         </div>
         <div class="header2">
-          <div class="nav">
-            <span class="nav-elem"      id="home" data-pane="home"> HOME </span> /
-            <span class="nav-elem fade" id="games" data-pane="games"> GAMES </span> /
-            <span class="nav-elem fade" id="ds" data-pane="ds"> DATA SCIENCE</span> /
-            <span class="nav-elem fade" id="bioe" data-pane="bioe"> BIOTECH </span>
+          <div class="nav nav-desktop">
+            <span class="nav-elem"      id="about" data-pane="about"> ABOUT ME </span> /
+            <span class="nav-elem fade" id="publications" data-pane="publications"> PUBLICATIONS </span> /
+            <span class="nav-elem fade" id="teaching" data-pane="teaching"> TEACHING </span> /
+            <span class="nav-elem fade" id="cv" data-pane="cv"> CV </span> /
+            <span class="nav-elem fade" id="personal" data-pane="personal"> PERSONAL </span>
           </div>
         </div>
         <div class="sidebar">
             <div class="pad-list">
                 <img id="me" src="photos/alex-500-500.jpeg" />
             </div>
+            <div class="nav nav-mobile pad-list">
+              <span class="nav-elem"      data-pane="about"> ABOUT ME </span> /
+              <span class="nav-elem fade" data-pane="publications"> PUBLICATIONS </span> /
+              <span class="nav-elem fade" data-pane="teaching"> TEACHING </span> /
+              <span class="nav-elem fade" data-pane="cv"> CV </span> /
+              <span class="nav-elem fade" data-pane="personal"> PERSONAL </span>
+            </div>
             <div class="pad-list">Where to find me</div>
             <div class="sub text2 pad-list">physically:</div>
             <div id="whereami"></div>
+            <div id="office" class="sub">14-211</div>
+            <div class="sub">W25 Office hours: </br> T 1-3pm, W 1-2pm</div>
             <ul>
                 <li class="sub text2 pad-list">online:</li>
-                <li class="sub">ajbisberg [at] gmail [dot] com</li>
+                <li class="sub">abisberg [at] calpoly [dot] edu</li>
+                <li class="sub"><a target="_blank" href="https://scholar.google.com/citations?user=xDAG-JkAAAAJ&hl=en">Google Scholar</a></li>
                 <li class="sub"><a target="_blank" href="https://www.linkedin.com/in/abisberg/">LinkedIn</a></li>
                 <li class="sub"><a target="_blank" href="https://github.com/ajbisberg">GitHub</a></li>
-                <li class="sub"><a target="_blank" href="https://scholar.google.com/citations?user=xDAG-JkAAAAJ&hl=en">Google Scholar</a></li>
           </ul>
-          <div class="sub text2 pad-list">last updated: Sep 5, 2024</div>
+          <div class="sub text2 pad-list">last updated: Jan 29, 2026</div>
         </div>
         <div class="content">
-          <ul class="show" data-pane="home">
-            <li>
-              Hi, I'm Alex. </br>
-              Check out what I've worked on by clicking on the bar above.
+          <ul class="show" data-pane="about">
+            <li><h1>Welcome!</h1></li>
+            <li class="pad-list long-text">
+              I’m an Assistant Professor of Computer Science at <a target="_blank" href="https://csc.calpoly.edu/">Cal Poly SLO</a>. Before joining Cal Poly, I completed my PhD at the University of Southern California in the <a target="_blank" href="https://www.emilio.ferrara.name/">HUMANS lab</a> alongside <a href="https://sites.google.com/view/annenberg-game-lab/home" target="_blank">Annenberg Game Lab</a>.
             </li>
+            <li><h3> Research Summary </h3></li>
+            <li class="pad-list long-text">
+              My recent projects use player behavior traces and communication data from multiplayer games to understand cooperation, generosity, and team performance.
+            </li>
+            <li class="pad-list long-text">
+              Before moving into computer science, I trained in bioengineering and worked on data-driven biomedical research, including community-based efforts, visualization of high-dimensional data and improving prognostic modeling for acute myeloid leukemia (AML). Looking ahead, I’m interested in building “open social media” infrastructure with <a target="_blank" href="https://osmo.social/">Osmo</a> that enables transparent, reproducible, and human-centered research on online communities—tools and datasets that make it easier to study platform design choices, social dynamics, and interventions while taking privacy and governance seriously.
+            </li>
+          </ul>
+
+          <ul class="hide" data-pane="publications">
+            <li><h2> Publications in CS </h2></li>
+            <li class="pad-list long-text">
+              Bisberg, A. J., Shahik, S. J., Zeng, Y., Morstatter, F., Chen, E., Ferrara, E., and Williams, D. (2025). <a target="_blank" href="https://dl.acm.org/doi/10.1145/3757569">“Communication Patterns Predict Team Skill in Multiplayer Online Games.”</a> <span class="text2"><em>Proceedings of the ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW)</em></span>.
+            </li>
+            <li class="pad-list long-text">
+              Bisberg, A. J., Chen, E., Twyman, M., Williams, D., and Ferrara, E. (2025). <a target="_blank" href="https://dl.acm.org/doi/10.1145/3723498.3723729">“STRIVE: Socio-behavioral Taxonomy Representation for Interactive Virtual Environments.”</a> <span class="text2"><em>Proceedings of the Foundations of Digital Games Conference (FDG)</em></span>.
+            </li>
+            <li class="pad-list long-text">
+              Chen, E., Bisberg, A. J., and Ferrara, E. (2024). <a target="_blank" href="https://arxiv.org/abs/2402.05865">“Can You Play Anything Else? Understanding Play Style Flexibility in League of Legends.”</a> <span class="text2"><em>Auxiliary Paper, IEEE Conference on Games (CoG)</em></span>.
+            </li>
+            <li class="pad-list long-text">
+              Bisberg, A. J., Jiang, J., Zeng, Y., Chen, E., and Ferrara, E. (2022). <a target="_blank" href="https://arxiv.org/abs/2207.10615v1">“The Gift That Keeps on Giving: Generosity is Contagious in Multiplayer Online Games.”</a> <span class="text2"><em>Proceedings of the ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW)</em></span>.
+            </li>
+            <li class="pad-list long-text">
+              Bisberg, A. J., and Ferrara, E. (2022). <a target="_blank" href="https://ieeexplore.ieee.org/document/9893671">“GCN-WP: Semi-Supervised Graph Convolutional Networks for Win Prediction in Esports.”</a> <span class="text2"><em>Proceedings of the IEEE Conference on Games (CoG)</em></span>.
+            </li>
+            <li class="pad-list long-text">
+              Bisberg, A. J., and Cardona-Rivera, R. E. (2019). <a target="_blank" href="https://www.aaai.org/ojs/index.php/AIIDE/article/view/5233">“SCOPE: Selective Cross-validation Over Parameters for Elo.”</a> <span class="text2"><em>Proceedings of the AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment (AIIDE)</em></span>. <span class="text2">(Oral + poster acceptance rate: 49%.)</span>
+            </li>
+            <li class="pad-list long-text">
+              Huang-Isherwood, K. M., Kim, S. S. Y., Williams, D., and Bisberg, A. J. (2022). <a target="_blank" href="https://doi.org/10.3989/ris.2022.80.4.M22-003">“Women Hold Up (More Than) Half of the Sky: Examining Gameplay Motivations, Behaviors, and Social Capital in a Multiplayer Game Popular Among Female Players.”</a> <span class="text2"><em>Revista Internacional de Sociología</em>, 80(4)</span>.
+            </li>
+            <li><h2> Publications in Bioengineering </h2></li>
+            <li class="pad-list long-text">
+              Hill, S. M., et al. (Qutub Lab and DREAM Challenges collaboration). (2016). <a target="_blank" href="https://www.nature.com/articles/nmeth.3773">“Inferring causal molecular networks: empirical assessment through a community-based effort.”</a> <span class="text2"><em>Nature Methods</em>, 13(4), 310-318</span>.
+            </li>
+            <li class="pad-list long-text">
+              Noren, D. P., et al. (Qutub Lab and DREAM Challenges collaboration). (2016). <a target="_blank" href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004890">“A crowdsourcing approach to developing and assessing prediction algorithms for AML prognosis.”</a> <span class="text2"><em>PLoS Computational Biology</em>, 12(6)</span>.
+            </li>
+          </ul>
+
+          <ul class="hide" data-pane="cv">
+            <li><h1>Curriculum Vitae</h1></li>
+            <li class="pad-list">
+              <div><strong>Alexander J. Bisberg</strong></div>
+              <div class="sub text2">San Luis Obispo, CA</div>
+              <div class="sub text2">Updated: January 2026</div>
+            </li>
+
+            <li><h3> Educational Preparation </h3></li>
+            <li class="pad-list long-text">
+              <strong>Ph.D., Computer Science</strong> — University of Southern California (Los Angeles, CA) <span class="text2">May 2025</span>
+              <div class="sub text2">Dissertation: <em>Competitive and social success in multiplayer online games</em>.</div>
+            </li>
+            <li class="pad-list long-text">
+              <strong>M.S., Computing (Data Analytics)</strong> — University of Utah (Salt Lake City, UT) <span class="text2">May 2020</span>
+            </li>
+            <li class="pad-list long-text">
+              <strong>B.S., Bioengineering</strong> — Rice University (Houston, TX) <span class="text2">May 2015</span>
+              <div class="sub text2">Graduated with Distinction in Research and Creative Work.</div>
+            </li>
+
+            <li><h3> Employment History </h3></li>
+            <li class="pad-list long-text">
+              <strong>Assistant Professor, Computer Science and Software Engineering</strong> — California Polytechnic State University (San Luis Obispo, CA) <span class="text2">Sept 2025–present</span>
+            </li>
+            <li class="pad-list long-text">
+              <strong>Data Science Intern</strong> — Electronic Arts (Remote) <span class="text2">May 2024–Aug 2024</span>
+            </li>
+            <li class="pad-list long-text">
+              <strong>Data Science Intern</strong> — Riot Games (Remote) <span class="text2">May 2023–Aug 2023</span>
+            </li>
+            <li class="pad-list long-text">
+              <strong>Data Science Intern</strong> — Riot Games (Remote) <span class="text2">May 2022–Aug 2022</span>
+            </li>
+            <li class="pad-list long-text">
+              <strong>Data Science Intern</strong> — Activision Blizzard (Remote) <span class="text2">May 2020–Aug 2020</span>
+            </li>
+            <li class="pad-list long-text">
+              <strong>Data Science Intern</strong> — Zillow Group (Seattle, WA) <span class="text2">May 2019–Aug 2019</span>
+            </li>
+            <li class="pad-list long-text">
+              <strong>Data Scientist / Full Stack Engineer</strong> — Harvest Exchange (Houston, TX) <span class="text2">Apr 2016–May 2018</span>
+            </li>
+            <li class="pad-list long-text">
+              <strong>Co-founder</strong> — Data Is Beautiful Solutions (DiBS) (Houston, TX) <span class="text2">Feb 2014–Apr 2016</span>
+            </li>
+
+            <li><h3> Awards, Honors, and Honorable Mentions </h3></li>
+            <li class="pad-list long-text">
+              Travel Award, Foundations of Digital Games Conference <span class="text2">2025</span>
+            </li>
+            <li class="pad-list long-text">
+              Best Paper Award (Game Studies Division), NCA 109th Annual Convention <span class="text2">2023</span>
+            </li>
+            <li class="pad-list long-text">
+              First Year PhD Fellowship, Viterbi School of Engineering, University of Southern California <span class="text2">Fall 2020</span>
+            </li>
+
+            <li><h3> Publications </h3></li>
+            <li><h4> Peer-reviewed conference papers </h4></li>
+            <li class="pad-list long-text">
+              Chen, E., Bisberg, A. J., Williams, D., Seif El-Nasr, M., Ferrara, E. (2026). “Change is Hard: Consistent Player Behavior Across Games with Conflicting Incentives.” <span class="text2"><em>Submitted to CHI</em></span>.
+            </li>
+            <li class="pad-list long-text">
+              Bisberg, A. J., Shahik, S. J., Zeng, Y., Morstatter, F., Chen, E., Ferrara, E., and Williams, D. (2025). “Communication Patterns Predict Team Skill in Multiplayer Online Games.” <span class="text2"><em>CSCW</em></span>.
+            </li>
+            <li class="pad-list long-text">
+              Bisberg, A. J., Chen, E., Twyman, M., Williams, D., and Ferrara, E. (2025). “STRIVE: Socio-behavioral Taxonomy Representation for Interactive Virtual Environments.” <span class="text2"><em>FDG</em></span>.
+            </li>
+            <li class="pad-list long-text">
+              Chen, E., Bisberg, A. J., and Ferrara, E. (2024). “Can You Play Anything Else? Understanding Play Style Flexibility in League of Legends.” <span class="text2"><em>Auxiliary Paper, IEEE CoG</em></span>.
+            </li>
+            <li class="pad-list long-text">
+              Bisberg, A. J., Jiang, J., Zeng, Y., Chen, E., and Ferrara, E. (2022). “The Gift That Keeps on Giving: Generosity is Contagious in Multiplayer Online Games.” <span class="text2"><em>CSCW</em></span>.
+            </li>
+            <li class="pad-list long-text">
+              Bisberg, A. J., and Ferrara, E. (2022). “GCN-WP: Semi-Supervised Graph Convolutional Networks for Win Prediction in Esports.” <span class="text2"><em>IEEE CoG</em></span>.
+            </li>
+            <li class="pad-list long-text">
+              Bisberg, A. J., and Cardona-Rivera, R. E. (2019). “SCOPE: Selective Cross-validation Over Parameters for Elo.” <span class="text2"><em>AIIDE</em></span>. <span class="text2">(Oral + poster acceptance rate: 49%.)</span>
+            </li>
+
+            <li><h4> Peer-reviewed journal papers </h4></li>
+            <li class="pad-list long-text">
+              Huang-Isherwood, K. M., Kim, S. S. Y., Williams, D., and Bisberg, A. J. (2022). “Women Hold Up (More Than) Half of the Sky: Examining Gameplay Motivations, Behaviors, and Social Capital in a Multiplayer Game Popular Among Female Players.” <span class="text2"><em>Revista Internacional de Sociología</em>, 80(4)</span>.
+            </li>
+            <li class="pad-list long-text">
+              Hill, S. M., et al. (Qutub Lab and DREAM Challenges collaboration). (2016). “Inferring causal molecular networks: empirical assessment through a community-based effort.” <span class="text2"><em>Nature Methods</em>, 13(4), 310-318</span>.
+            </li>
+            <li class="pad-list long-text">
+              Noren, D. P., et al. (Qutub Lab and DREAM Challenges collaboration). (2016). “A crowdsourcing approach to developing and assessing prediction algorithms for AML prognosis.” <span class="text2"><em>PLoS Computational Biology</em>, 12(6)</span>.
+            </li>
+
+            <li><h4> Peer-reviewed presentations (non-archival) </h4></li>
+            <li class="pad-list long-text">
+              Liu, M., Gao, Z., Bisberg, A. J., and Williams, D. (2024). “From Isolation to Compassion: A Natural Experiment of How Stay-at-Home Orders Unleashed a Wave of Virtual Altruism.” <span class="text2"><em>74th Annual ICA Conference</em></span>.
+            </li>
+            <li class="pad-list long-text">
+              Huang-Isherwood, K. M., Li, Y., Jang, E., Bisberg, A. J., and Kim, D. (2023). “Future Time Perspective and In-Game Social Capital in Three Cultures.” <span class="text2"><em>NCA 109th Annual Convention</em></span>. <span class="text2">(Winner of the NCA Best Paper Award from the Game Studies Division.)</span>
+            </li>
+            <li class="pad-list long-text">
+              Tan, L., Kim, S. S. Y., and Bisberg, A. J. (2023). “Intergroup Contact, Contact Heterogeneity, and Cross-group Friendship: Behavioral Evidence from a Global Prosocial Mobile Game.” <span class="text2"><em>NCA 109th Annual Convention</em></span>.
+            </li>
+
+            <li><h3> Conference Participation </h3></li>
+            <li class="pad-list long-text">
+              “Communication Patterns Predict Team Skill in Multiplayer Online Games.” Presentation at <em>CSCW 2025</em>, Online Interactions with Friends and Strangers track <span class="text2">(Bergen, Norway)</span>.
+            </li>
+            <li class="pad-list long-text">
+              “STRIVE: Socio-behavioral Taxonomy Representation for Interactive Virtual Environments.” Presentation at <em>FDG 2025</em>, Game Analytics and Visualization track <span class="text2">(Graz, Austria)</span>.
+            </li>
+            <li class="pad-list long-text">
+              “The Gift That Keeps on Giving: Generosity is Contagious in Multiplayer Online Games.” Presentation at <em>CSCW 2022</em> <span class="text2">(Remote)</span>.
+            </li>
+            <li class="pad-list long-text">
+              “GCN-WP: Semi-Supervised Graph Convolutional Networks for Win Prediction in Esports.” Presentation at <em>IEEE CoG 2022</em> <span class="text2">(Remote)</span>.
+            </li>
+            <li class="pad-list long-text">
+              “SCOPE: Selective Cross-validation Over Parameters for Elo.” Poster presentation at <em>AIIDE 2019</em> <span class="text2">(Atlanta, GA)</span>.
+            </li>
+
+            <li><h3> Grants </h3></li>
+            <li><h4> Funded </h4></li>
+            <li class="pad-list long-text">
+              Tinker Thinking Machines Teaching Grant. <span class="text2">$250 / student (~20 students) in credits towards the Tinker LLM training platform.</span>
+            </li>
+            <li><h4> In review </h4></li>
+            <li class="pad-list long-text">
+              Bisberg, A. J. (PI) and Wright, A. (Co-PI). “The Open Social Lab: A human-centered research platform for social media” (Research Track). Noyce School RFP AY 25-26. <span class="text2">Amount requested: $35,416.00. Submitted: 12/15/2025.</span>
+            </li>
+
+            <li><h3> Service </h3></li>
+            <li><h4> Academic service </h4></li>
+            <li class="pad-list long-text">
+              Cal Poly CSSE Department — Curriculum Committee <span class="text2">Fall 2025–present</span>.
+            </li>
+            <li class="pad-list long-text">
+              Game Analytics and Visualization Track Co-chair, ACM Foundations of Digital Games (FDG) <span class="text2">2026</span>.
+            </li>
+            <li class="pad-list long-text">
+              Programming committee member: AIIDE 2024; The Web Conference 2023; IEEE CoG 2022; AIIDE-GAW 2021; FDG 2021.
+            </li>
+            <li class="pad-list long-text">
+              Reviewer: CSCW 2024 Posters; The Web Conference 2023, 2022, 2021.
+            </li>
+            <li><h4> Professional service </h4></li>
+            <li class="pad-list long-text">
+              Volunteer, Bikerowave <span class="text2">Nov 2023–Aug 2025</span>.
+            </li>
+            <li class="pad-list long-text">
+              Data Ambassador, DataKind <span class="text2">2018–2020</span>.
+            </li>
+          </ul>
+
+          <ul class="hide" data-pane="teaching">
+            <li><h2> Courses </h2></li>
+            <li class="pad-list long-text">
+              <strong>Winter 2025</strong> 
+            </li>
+            <li class="pad-list long-text">CSC 581: "Computer Support for Knowledge Management"</li>
+            <li class="pad-list long-text">
+              <strong>Fall 2025</strong>
+            </li>
+            <li class="pad-list long-text">CSC 203: "Project-based Object-oriented Programming and Design"</li>
+    
+          </ul>
+
+          <ul class="hide" data-pane="personal">
             <li>
               <br />
               Below are some photos of me outside, my favorite place to be.
             </li>
             <li>
               <br />
-              <img src="photos/climbing-4x3.jpeg" class="banner"/> 
+              <img src="photos/climbing-4x3.jpeg" class="banner"/>
               <br/>
-              <img src="photos/halfdome-4x3.jpeg" class="banner"/> 
+              <img src="photos/halfdome-4x3.jpeg" class="banner"/>
               <br/>
-              <img src="photos/skydiving-4x3.jpg" class="banner"/> 
-            </li>
-        
-          </ul>
-          <ul class="hide" data-pane="games">
-            <div class="text2 pad-list2">[ school ]</div>
-            <li class="pad-list">
-              PhD Candidate in Computer Science at the <a target="_blank" href="https://www.cs.usc.edu/">USC Viterbi School of Engineering</a>
-              <div class="sub text2">5<sup>th</sup> year, currently working with <a target="_blank" href="http://www.emilio.ferrara.name/">HUMANS lab</a> and the <a target="_blank" href="https://sites.google.com/view/annenberg-game-lab/home">Annenberg Game Lab</a></div>
-              <div class="sub text2"> I study ways to increase pro-social behavior and collaboration in multiplayer online games.</div>
-            </li>
-            <li class="pad-list">
-              MS in Computing at the <a target="_blank" href="http://www.cs.utah.edu/graduate/">Univeristy of Utah</a>
-              <div class="sub text2">Data Management and Analytics track</div>
-              <div class="sub text2">Completed project <a target="_blank" href="/bisberg-ms-project-pres.pdf">
-                Construction and Analysis of Skill Modeling Frameworks in Esports</a></div>
-              <div class="sub text2"><a target="_blank" href="http://qed.cs.utah.edu/">QED lab</a> alunmi</div>
-            </li>
-            <div class="text2 pad-list2">[ work ]</div>
-            <li class="pad-list">
-              Data Science Intern at <a target="_blank" href="https://www.ea.com/">EA</a>
-              <div class="sub text2">Bot detection in <a target="_blank" href="https://www.ea.com/games/apex-legends">Apex Legends</a></div>
-            </li>
-            <li class="pad-list">
-              Data Science Intern at <a target="_blank" href="https://www.riotgames.com/">Riot Games</a>
-              <div class="sub text2">Cross-product player engagement prediction.</div>
-            </li>
-            <li class="pad-list">
-              Data Science Intern at <a target="_blank" href="https://www.activision.com/">Activision Blizzard</a>
-              <div class="sub text2">Cheat detecion in Call of Duty: Warzone.</div>
-            </li>
-            <li class="pad-list text2">[ publications ]</li>
-            <li class="pad-list long-text">
-              <a target="_blank" href="https://arxiv.org/abs/2207.10615v1">“The Gift That Keeps on Giving: Generosity is Contagious in Multiplayer Online Games”</a>
-              <span class="text2"> CSCW 2022 </span>
-            </li>
-            <li class="pad-list long-text">
-              <a target="_blank" href="https://ieeexplore.ieee.org/document/9893671">“GCN-WP -- Semi-Supervised Graph Convolutional Networks for Win Prediction in Esports”</a>
-              <span class="text2"> IEEE CoG 2022 </span>
-            </li>
-            <li class="pad-list long-text">
-              <a target="_blank" href="https://www.aaai.org/ojs/index.php/AIIDE/article/view/5233">“SCOPE: Selective Cross-validation Over Parameters for Elo”</a>
-              <span class="text2"> AIIDE 2019 </span>
-            </li>
-            <li class="pad-list text2">[ unpublished ]</li>
-            <li class="pad-list sub"><a target="_blank" href="https://medium.com/@ajbisberg/funneling-mages-and-marksmen-rift-rivals-strategy-breakdown-87336e77439c">
-                League of Legends (LoL) Rift Rivals 2018 strategy breakdown</a></li>
-            <li class="pad-list sub"><a target="_blank" href="/lol-data.html"> LoL win rate based on game time</a></li>
-            <li class="pad-list sub"><a target="_blank" href="https://docs.google.com/spreadsheets/d/15vv6mqI-u07gqDpwXnIhGrFzpLXKxMNT3PsVktY_U6s/edit#gid=1823991896">
-              LoL esports player communication type and frequency</a>
-            </li>
-          </ul>
-          <ul class="hide" data-pane="bioe">
-            <li class="pad-list text2">[ school ]</li>
-            <li class="pad-list">BS in Bioengineering at <a target="_blank" href="https://bioengineering.rice.edu/">Rice University</a>
-              <div class="sub text2">Graduated with Distinction in Research and Creative Work</div>
-              <div class="sub text2">Worked closely with <a target="_blank" href="https://qutublab.org/">Dr. Amina Qutub</a></div>
-              <div class="sub text2">Winner of <a target="_blank" href="https://www.synapse.org/#!Synapse:syn1720047/wiki/56221">DREAM 8</a> and the <a target="_blank" href="https://the-bioinformatics-peer-prize.thinkable.org/">Bioinformatics Peer Prize</a></div>
-              <div class="sub text2">Received the <a target="_blank" href="https://www.mdanderson.org/research/departments-labs-institutes/programs-centers/cancer-prevention-research-training-program.html">CPRTP</a> fellowship</div>
-            </li>
-            <li class="pad-list text2">[ work ]</li>
-            <li class="pad-list">
-              Co-founder of <a target="_blank" href="http://www.dibsvis.com/">DiBS</a>
-              <div class="sub text2">Data visualization and analytics startup</div>
-              <div class="sub text2">Accepted into <a target="_blank" href="https://www.owlspark.com/">OwlSpark</a> and <a target="_blank" href="http://www.tmc.edu/innovation/innovation-programs/tmcx/">TMCX</a></div>
-            </li>
-            <li class="pad-list text2">[ selected publications ]</li>
-            <li class="pad-list text2 long-text">
-              <a href="https://www.nature.com/articles/nmeth.3773">
-                “Inferring causal molecular networks: empirical assessment through a community-based effort”.</a> Nature Methods.
-            </li>
-            <li class="pad-list text2 long-text">
-              <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004890">
-                “A Crowdsourcing Approach to Developing and Assessing Prediction Algorithms for AML Prognosis”</a> PLOS Computational Biology.
-            </li>
-       
-            <li class="pad-list text2">[ press ]</li>
-            <a class="sub" target="_blank" href="https://xconomy.com/texas/2014/08/01/dibss-biowheel-aims-to-paint-a-dynamic-picture-of-life-sciences-data/">
-              DiBS’s BioWheel Aims to Paint a Dynamic Picture of Life Sciences Data</a>
-            <p class="sub"><a target="_blank" href="https://www.tmc.edu/news/2015/08/tmcx-company-profile-dibs/">
-              TMCx Company Profile: DiBS</a></p>
-            <p class="sub"> <a href="https://news.rice.edu/2015/04/29/students-use-smarts-for-damaged-hearts/">
-              Students use smarts for damaged hearts</a></p>
-
-
-          </ul>
-          <ul class="hide" data-pane="ds">
-            <li class="pad-list text2">[ jobs ]</li>
-            <li class="pad-list">
-              Data Science Intern at <a target="_blank" href="https://www.zillow.com/">Zillow Group</a>
-              <div class="sub text2">Dataset assembly with Presto, SQL</div>
-              <div class="sub text2">Built random forest model to predict home transactions</div>
-            </li>
-            <li class="pad-list">
-              Data Scientist at <a target="_blank" href="https://www.hvst.com/">Harvest Exchange</a>
-              <div class="sub text2">Data extraction and storage with SQL</div>
-              <div class="sub text2">Data ingestion and transformation with Python</div>
-              <div class="sub text2">Data visualization and reports using <a target="_blank" href="https://reactjs.org/">React</a> and <a target="_blank" href="https://d3js.org/">D3</a></div>
-            </li>
-            <li class="pad-list text2">[ talks ]</li>
-            <li class="pad-list">
-              <a target="_blank" href="https://docs.google.com/presentation/d/1EICZZzNS-iMCIe8Ddgc0vYXjQbGKgcZQu35ItvwY0J0/edit?usp=sharing">The Sky is Falling</a>
-              <div class="sub text2">Some data science lessons I've learned, presented at <a target="_blank" href="https://www.spacedatasymposia.com/">DSSS 2018</a></div>
-            </li>
-            <li class="pad-list text2">[ writing ]</li>
-            <li class="pad-list"><a target="_blank" href="http://blog.hvst.com/harvest-data-roundup-vol.-1">Harvest Data Roundup</a>
-              <div class="sub text2"> What are people reading and writing on Harvest Exchange?</div>
-            </li>
-            <li class="pad-list">
-              <a target="_blank" href="https://medium.com/@ajbisberg/why-all-cities-need-an-event-like-denver-startup-week-38b1f35c5a91">Why all cities need an event like Denver Startup Week</a>
-              <div class="sub text2">Re: <a target="_blank" href="https://www.denverstartupweek.org/">Denver Startup Week</a></div>
-            </li>
-            <li class="pad-list"><a target="_blank" href="./bisberg-thresher-2012.pdf">Campus newspaper</a>
-              <div class="sub text2"> Some articles I wrote for the Rice Thresher </div>
+              <img src="photos/skydiving-4x3.jpg" class="banner"/>
             </li>
           </ul>
         </div>
@@ -195,24 +301,37 @@
       navs[i].onclick = togglePane
     }
     window.onload = function() {
-      return document.querySelector(document.location.hash).click()
+      var hash = document.location.hash
+      if (hash) {
+        try {
+          var target = document.querySelector(hash)
+          if (target) {
+            target.click()
+            return
+          }
+        } catch (e) {}
+      }
+      var first = document.querySelector('.nav .nav-elem')
+      if (first) {
+        first.click()
+      }
     }
   </script>
   <script type="text/javascript" src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"></script>
   <script type="text/javascript">
-    // var center = [34.0059314,-118.3668297]
-    var usc = [34.0219008,-118.2872923]
-    var mymap = L.map('whereami').setView(usc,10)
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
-      maxZoom: 18,
-      id: 'osm-streets'
-    }).addTo(mymap);
-    // var mdr = [33.9799111,-118.4396126]
-    var m1 = L.marker(usc).addTo(mymap);
-    // var m2 = L.marker(mdr).addTo(mymap);
-    m1.bindPopup("<b>USC</b><br>Thomas Lord Department of<br> Computer Science <br>Los Angeles, CA") //.openPopup()
-    // m2.bindPopup("<b>946</b><br>Information Sciences<br> Institute (ISI)<br>Marina Del Rey, CA")
+    try {
+      if (window.matchMedia && window.matchMedia('(min-width:500px)').matches) {
+        var center = [35.300136,-120.6621039]
+        var mymap = L.map('whereami').setView(center,13)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+          maxZoom: 18,
+          id: 'osm-streets'
+        }).addTo(mymap);
+        var m1 = L.marker(center).addTo(mymap);
+        m1.bindPopup("<b>Cal Poly SLO</b><br>14-211").openPopup()
+      }
+    } catch (e) {}
   </script>
 </body>
 </html>
